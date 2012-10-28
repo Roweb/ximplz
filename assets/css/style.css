@@ -1,0 +1,189 @@
+@import 'reset.css';
+.clear{
+	clear:both;
+	height:0;
+	font-size:1px;
+}
+
+body,html{
+	margin: 0 auto;
+	padding: 0px;
+	height: 100%;
+	min-height: 400px;
+	min-width: 900px;
+	font-family: 'Ubuntu', sans-serif;
+	overflow: hidden;
+}
+a {text-decoration: none; color: #333;}
+#header {
+	height: 110px;
+	margin-top: -1px;
+	background: #ddd;
+	border-bottom: 1px solid #222;
+	position:relative;
+	
+	
+}
+#header > img {float: left;width: 250px;margin-right:68px;}
+#header > div {float: left; border: none;margin-top:15px;}
+#header .jp-audio {}
+
+#content {
+	margin: 0 auto;
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	height: 80%;
+}
+#content .folders {
+	float: left;
+	width: 20%;
+	min-width: 20%;
+	max-width: 20%;
+	border-right: 1px solid #ddd;
+	height: 100%;
+	margin-left: -2px;
+	background: #eaeaea;
+}
+#content .files {
+	float: left;
+	width: 50%;
+	min-width: 50%;
+	max-width: 50%;
+	border-right: 1px solid #ddd;
+	height: 110%;
+}
+
+#content .playlists {
+	float: left;
+	width: 29%;
+	min-width: 29%;
+	max-width: 29%;
+	height: 100%;
+	margin-right: -1px;
+	background: #eaeaea;
+}
+
+ul.switch {
+	list-style-type: none;
+	margin: 0px;
+	padding: 10px 2px 0 2px;
+	border-bottom: 1px solid #adadad;
+	height: 30px;
+	font-size: 12px;
+}
+ul.switch li {
+	background: #e4e4e4;
+	margin-top: -1px;
+	margin-right: 1px;
+	float: left;
+	height: 100%;
+	line-height: 30px;
+	padding: 0 5px 0 5px;
+	border-radius: 5px 5px 0px 0px;
+	border: 1px solid #bbb;
+	border-bottom: none;
+}
+ul.switch li.active {
+	background: #98d0f8;
+	border-color: #35c2eb;
+}
+ul.switch li a {
+	display: block;
+	color: #525050;
+}
+
+ol.songs {
+	/*list-style-type: none;*/
+	list-style-position: inside;
+	font-size: 12px;
+	margin: 0 0 0px 0;
+	padding: 5px 0 0 0;
+	height: 85%;
+	overflow-y: auto;
+}
+ol.songs li {
+	padding: 0 10px 0 10px;
+	margin: 0 0 0 0px;
+	border-bottom: 1px solid #ddd;
+	line-height: 24px;
+}
+ol.songs li:nth-child(even) {background: #ddd;}
+ol.songs li a {}
+ol.songs li a span {float: right;}
+.playlist ol.songs li.jp-playlist-current {background: blue;}
+.jp-playlist-item-remove {display: none !important}
+
+.current {background: red;}
+
+ul.folderslist{
+	list-style-position: inside;
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px 0 0 0;
+	height: 90%;
+	list-style-type: none;
+}
+
+ul.folderslist li {
+	padding: 0 10px 0 5px;
+	margin: 0;
+	border-bottom: 1px solid #ddd;
+	line-height: 24px;
+}
+
+ul.folderslist li a{
+	display:block;
+	margin-left:10px;
+}
+
+.jp-playlist{
+	display:none;
+}
+
+.jp-playlist-current, ol.songs li.jp-playlist-current {
+	background-color: #98D0F8;
+}
+
+.buttons {
+	border-top: 1px solid #ddd;
+	padding: 5px;
+}
+.buttons .save {background: url('../img/save.png') no-repeat; display: block; width: 16px; height: 16px; line-height: 16px; font-size: 13px; font-weight: bold; padding-left: 16px;}
+
+.hidden {display: none; }
+#loader{
+	margin:200px auto;
+	width:100px;
+}
+
+.ui-sortable-helper{
+	
+}
+
+#menu{
+	position:absolute;
+	width:200px;
+	right:50px;
+	top:20px;
+	height:50px;
+	list-style-type: none;
+}
+
+#recycle{
+	background: none repeat scroll 0 0 #EEEEEE;
+	position:absolute;
+    list-style-type: none;
+    margin: 0 10px 0 0;
+    padding: 36px;
+    width: 143px;
+    right:250px;
+	top:20px;
+	background:url(/assets/img/recycle_bin.png) top left no-repeat;
+}
+
+.folders .folderslist li {background: url('../img/folder.png') 4px 8px no-repeat;}
+.folders .folderslist li a {line-height: 30px; padding-left: 10px;}
+
+.folders .switch li.dropbox a {background-image: url('../img/dropbox.png'); background-position: middle left; background-repeat: no-repeat; padding: 0px 5px 0 20px; magin: 0px; height: 30px; display: inline;}
+.folders .switch li.skydrive a {background-image: url('../img/cloud.png'); background-position: middle left; background-repeat: no-repeat; padding: 0px 5px 0 20px; magin: 0px; height: 30px; display: inline;}
